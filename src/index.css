@@ -1,0 +1,11 @@
+/* Add padding to prevent content from being hidden behind the fixed navbar */
+body {
+    padding-top: 70px; /* Adjust based on navbar height */
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      padding-top: 90px; /* Extra space for smaller devices */
+    }
+  }
+  
