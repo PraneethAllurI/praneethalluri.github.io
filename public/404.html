@@ -1,9 +1,7 @@
 <script>
-    var redirect = window.location.href.split("#")[1];
-    if (redirect) {
-      window.location.replace(redirect);
-    } else {
-      window.location.replace("/");
+    var redirect = window.location.pathname;
+    if (redirect !== "/") {
+      window.location.replace("/#" + redirect);
     }
   </script>
   
