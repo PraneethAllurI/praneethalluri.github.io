@@ -68,7 +68,7 @@
   .resume-container {
     margin-top: 20px;
   }
-  
+   
   .resume-container button {
     font-weight: bold;
     padding: 10px 20px;
@@ -77,4 +77,39 @@
   .resume-container button:hover {
     background-color: #28a745; /* Slightly darker green */
   }
-  
+  /* Summary Section */
+.summary-card {
+  margin-top: 30px;
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #333;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  text-align: left;
+}
+
+.summary-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffcc00;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.summary-text {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .summary-card {
+    padding: 15px;
+  }
+  .summary-title {
+    font-size: 1.3rem;
+  }
+  .summary-text {
+    font-size: 0.9rem;
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../styles/home.css";
 import profilePic from '../assets/profilepic.jpg';
@@ -20,15 +20,6 @@ const Home = () => {
           <p className="lead fade-in">
             Building scalable, user-friendly applications with modern web technologies.
           </p>
-
-          <div className="highlighted-links fade-in">
-            <Link to="/workexperience" className="highlighted-link">Work Experience</Link>
-            <span className="mx-2">|</span>
-            <Link to="/projects" className="highlighted-link">Projects</Link>
-            <span className="mx-2">|</span>
-            <Link to="/about" className="highlighted-link">Skills</Link>
-          </div>
-
           {/* Resume Download Button */}
           <div className="resume-container fade-in">
             <a href="/Resume_MERN.pdf" download="Praneeth_Resume.pdf">
@@ -37,6 +28,28 @@ const Home = () => {
               </Button>
             </a>
           </div>
+
+          {/* Summary Section */}
+          <Card className="summary-card fade-in">
+            <Card.Body>
+              <Card.Title className="summary-title">Professional Summary</Card.Title>
+              <Card.Text className="summary-text">
+                • Over <strong>2.5+ years</strong> of professional IT experience.<br />
+                • <strong>1+ years</strong> of experience with <strong>Nagios</strong> for network monitoring, incident detection, and ticket management.<br />
+                • <strong>1 year</strong> of experience in managing <strong>high-priority incidents (P1, P2)</strong>.<br />
+                • Currently transitioning into <strong>Full Stack Development</strong>, with hands-on experience in <strong>MERN (MongoDB, Express.js, React, Node.js)</strong>.<br />
+                • Strong problem-solving abilities, attention to detail, and excellent collaboration skills.<br />
+                • Passionate about building scalable, user-friendly web applications and eager to apply growing development skills as a <strong>Full Stack Developer</strong>.
+                <div className="highlighted-links fade-in">
+            <Link to="/workexperience" className="highlighted-link">Work Experience</Link>
+            <span className="mx-2">|</span>
+            <Link to="/projects" className="highlighted-link">Projects</Link>
+            <span className="mx-2">|</span>
+            <Link to="/about" className="highlighted-link">Skills</Link>
+          </div>
+              </Card.Text>
+            </Card.Body>
+          </Card>
         </Col>
       </Row>
     </Container>

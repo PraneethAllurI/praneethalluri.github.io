@@ -76,14 +76,18 @@ const workExperience = [
 
 const skills = [
   {
-    experience: "Capgemini - Network Operations Center (NOC) Team Member",
-    duration: "Apr 2022 – Jun 2023",
+    experience: "Self-Employed - MERN Stack Developer",
+    duration: "June 2024 – Present",
     skills: [
-      "Network Monitoring (Nagios, Appworx)",
-      "Incident Detection & Troubleshooting",
-      "ServiceNow Ticket Management",
-      "SLA & KPI Adherence",
-      "Cross-Team Coordination"
+      "Full-Stack Development (MERN)",
+      "JavaScript (ES6+), React.js, Node.js, Express.js, MongoDB",
+      "RESTful API Design & Implementation",
+      "JWT Authentication & Security",
+      "State Management (Redux Toolkit, Context API)",
+      "Frontend UI (Bootstrap, TailwindCSS, React Router)",
+      "Version Control (Git, GitHub)",
+      "Cloud Storage (Cloudinary, Firebase Hosting)",
+      "Deployment (Vercel, Netlify)"
     ]
   },
   {
@@ -98,18 +102,14 @@ const skills = [
     ]
   },
   {
-    experience: "Self-Employed - MERN Stack Developer",
-    duration: "June 2024 – Present",
+    experience: "Capgemini - Network Operations Center (NOC) Team Member",
+    duration: "Apr 2022 – Jun 2023",
     skills: [
-      "Full-Stack Development (MERN)",
-      "JavaScript (ES6+), React.js, Node.js, Express.js, MongoDB",
-      "RESTful API Design & Implementation",
-      "JWT Authentication & Security",
-      "State Management (Redux Toolkit, Context API)",
-      "Frontend UI (Bootstrap, TailwindCSS, React Router)",
-      "Version Control (Git, GitHub)",
-      "Cloud Storage (Cloudinary, Firebase Hosting)",
-      "Deployment (Vercel, Netlify)"
+      "Network Monitoring (Nagios, Appworx)",
+      "Incident Detection & Troubleshooting",
+      "ServiceNow Ticket Management",
+      "SLA & KPI Adherence",
+      "Cross-Team Coordination"
     ]
   }
 ];
