@@ -36,28 +36,29 @@ const Spotify = () => {
 
   // 🔐 Get tokens from URL or localStorage
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const access_token = urlParams.get("access_token");
-    const refresh_token = urlParams.get("refresh_token");
-    const expires_in = urlParams.get("expires_in");
-
+    const hashParams = new URLSearchParams(window.location.hash.split('?')[1]);
+    const access_token = hashParams.get("access_token");
+    const refresh_token = hashParams.get("refresh_token");
+    const expires_in = hashParams.get("expires_in");
+    
+  
     if (access_token && refresh_token && expires_in) {
       const expiryTime = new Date(Date.now() + expires_in * 1000);
       localStorage.setItem("access_token", access_token);
       localStorage.setItem("refresh_token", refresh_token);
       localStorage.setItem("token_expiry", expiryTime.toISOString());
-
+  
       setAccessToken(access_token);
       setRefreshToken(refresh_token);
       setExpiresIn(expires_in);
       setIsAuthorized(true);
-
+  
       window.history.replaceState({}, document.title, window.location.pathname);
     } else {
       const storedAccess = localStorage.getItem("access_token");
       const storedRefresh = localStorage.getItem("refresh_token");
       const expiry = new Date(localStorage.getItem("token_expiry"));
-
+  
       if (storedAccess && storedRefresh) {
         if (new Date() < expiry) {
           setAccessToken(storedAccess);
@@ -66,9 +67,13 @@ const Spotify = () => {
         } else {
           refreshAccessToken(storedRefresh);
         }
+      } else {
+        // 👇 Redirect to Spotify login automatically if no token found
+        window.location.href =
+          "https://portfolio-chatbot-backend-wj84.onrender.com/api/spotify/login";
       }
     }
-  }, []);
+  }, []);  
 
   // 🔁 Schedule refresh 5 mins before expiry
   useEffect(() => {
@@ -142,7 +147,15 @@ const Spotify = () => {
     alert(`Playing track: ${trackId}`);
   };
 
-  if (!isAuthorized) {
+
+  // if(isAuthorized) {
+  //   return (
+  //     <div className="style">
+  //       <h1>Loading.........</h1>
+  //     </div>
+  //   )
+  // }
+  if (isAuthorized) {
     return (
       <div style={{ padding: "2rem", textAlign: "center" }}>
         <h2>Spotify Login Required</h2>
@@ -205,6 +218,24 @@ const Spotify = () => {
             }}
           >
             ⏸ Pause
+          </button>
+          <button
+            onClick={handlePlay}
+            onMouseEnter={(e) => (e.target.style.backgroundColor = "#1ed760")}
+            onMouseLeave={(e) => (e.target.style.backgroundColor = "#1DB954")}
+            style={{
+              margin: "10px",
+              padding: "10px 20px",
+              backgroundColor: "#1DB954",
+              color: "#000",
+              border: "none",
+              borderRadius: "20px",
+              cursor: "pointer",
+              fontWeight: "bold",
+              transition: "background 0.3s ease",
+            }}
+          >
+            ⏸ Play
           </button>
         </div>
       ) : (
