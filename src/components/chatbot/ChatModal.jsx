@@ -1,6 +1,6 @@
 // src/components/Chatbot/ChatModal.jsx
 import React, { useState } from "react";
-import { Modal, Button, Form, Spinner } from "react-bootstrap";
+import { Button, Form, Spinner } from "react-bootstrap";
 import axios from "axios";
 
 const ChatModal = ({ toggleChat }) => {
@@ -19,6 +19,9 @@ const ChatModal = ({ toggleChat }) => {
     setLoading(true);
 
     try {
+      // const res = await axios.post("http://localhost:5000/api/test", {
+      //   message: input,
+      // });
       const res = await axios.post("https://portfolio-chatbot-backend-wj84.onrender.com/api/test", {
         message: input,
       });

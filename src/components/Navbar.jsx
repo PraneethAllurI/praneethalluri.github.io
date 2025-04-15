@@ -80,6 +80,15 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link"
+                to="/spotify"
+                onClick={() => setExpanded(false)}
+              >
+                Spotify
+              </Link>
+              </li>
           </ul>
         </div>
       </div>
