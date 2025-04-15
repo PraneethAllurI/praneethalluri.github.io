@@ -13,6 +13,8 @@ const Home = () => {
     const refresh_token = queryParams.get("refresh_token");
     const expires_in = queryParams.get("expires_in");
 
+    console.log(access_token, refresh_token, expires_in)
+
     if (access_token && refresh_token && expires_in) {
       const expiryTime = new Date(Date.now() + parseInt(expires_in) * 1000);
 
@@ -21,10 +23,8 @@ const Home = () => {
       localStorage.setItem("token_expiry", expiryTime.toISOString());
 
       // ✅ Clean up URL so tokens don't stay visible
-      window.history.replaceState({}, document.title, window.location.pathname);
 
       console.log("🔐 Spotify tokens stored in localStorage");
-
       // Optional: auto-redirect to /spotify if needed
       // navigate("/spotify");
     }
