@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/home.css";
-import profilePic from '../assets/profilepic.jpg';
+import profilePic from "../assets/profilepic.jpg";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -13,8 +13,7 @@ const Home = () => {
     const refresh_token = queryParams.get("refresh_token");
     const expires_in = queryParams.get("expires_in");
 
-    console.log(access_token, refresh_token, expires_in)
-
+    console.log(access_token, refresh_token, expires_in);
     if (access_token && refresh_token && expires_in) {
       const expiryTime = new Date(Date.now() + parseInt(expires_in) * 1000);
 
@@ -23,8 +22,10 @@ const Home = () => {
       localStorage.setItem("token_expiry", expiryTime.toISOString());
 
       // ✅ Clean up URL so tokens don't stay visible
+      window.history.replaceState({}, document.title, window.location.pathname);
 
       console.log("🔐 Spotify tokens stored in localStorage");
+
       // Optional: auto-redirect to /spotify if needed
       // navigate("/spotify");
     }
@@ -45,7 +46,8 @@ const Home = () => {
             Hi, I'm <span className="highlight">Praneeth</span>
           </h1>
           <p className="lead fade-in">
-            Building scalable, user-friendly applications with modern web technologies.
+            Building scalable, user-friendly applications with modern web
+            technologies.
           </p>
 
           {/* Resume Download Button */}
@@ -60,22 +62,41 @@ const Home = () => {
           {/* Summary Section */}
           <Card className="summary-card fade-in mt-4">
             <Card.Body>
-              <Card.Title className="summary-title">Professional Summary</Card.Title>
+              <Card.Title className="summary-title">
+                Professional Summary
+              </Card.Title>
               <Card.Text className="summary-text">
-                • Over <strong>2.5+ years</strong> of professional IT experience.<br />
-                • <strong>1+ years</strong> of experience with <strong>Nagios</strong> for network monitoring, incident detection, and ticket management.<br />
-                • <strong>1 year</strong> of experience in managing <strong>high-priority incidents (P1, P2)</strong>.<br />
-                • Currently transitioning into <strong>Full Stack Development</strong>, with hands-on experience in <strong>MERN (MongoDB, Express.js, React, Node.js)</strong>.<br />
-                • Strong problem-solving abilities, attention to detail, and excellent collaboration skills.<br />
-                • Passionate about building scalable, user-friendly web applications and eager to apply growing development skills as a <strong>Full Stack Developer</strong>.
+                • Over <strong>2.5+ years</strong> of professional IT
+                experience.
+                <br />• <strong>1+ years</strong> of experience with{" "}
+                <strong>Nagios</strong> for network monitoring, incident
+                detection, and ticket management.
+                <br />• <strong>1 year</strong> of experience in managing{" "}
+                <strong>high-priority incidents (P1, P2)</strong>.<br />•
+                Currently transitioning into{" "}
+                <strong>Full Stack Development</strong>, with hands-on
+                experience in{" "}
+                <strong>MERN (MongoDB, Express.js, React, Node.js)</strong>.
+                <br />
+                • Strong problem-solving abilities, attention to detail, and
+                excellent collaboration skills.
+                <br />• Passionate about building scalable, user-friendly web
+                applications and eager to apply growing development skills as a{" "}
+                <strong>Full Stack Developer</strong>.
               </Card.Text>
 
               <div className="highlighted-links fade-in">
-                <Link to="/workexperience" className="highlighted-link">Work Experience</Link>
+                <Link to="/workexperience" className="highlighted-link">
+                  Work Experience
+                </Link>
                 <span className="mx-2">|</span>
-                <Link to="/projects" className="highlighted-link">Projects</Link>
+                <Link to="/projects" className="highlighted-link">
+                  Projects
+                </Link>
                 <span className="mx-2">|</span>
-                <Link to="/about" className="highlighted-link">Skills</Link>
+                <Link to="/about" className="highlighted-link">
+                  Skills
+                </Link>
               </div>
             </Card.Body>
           </Card>

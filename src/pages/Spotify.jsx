@@ -5,7 +5,6 @@ import axios from "../../axios";
 const Spotify = () => {
   const [accessToken, setAccessToken] = useState("");
   const [refreshToken, setRefreshToken] = useState("");
-  const [expiresIn, setExpiresIn] = useState("");
   const [topTracks, setTopTracks] = useState([]);
   const [nowPlaying, setNowPlaying] = useState(null);
   const [isAuthorized, setIsAuthorized] = useState(false);
