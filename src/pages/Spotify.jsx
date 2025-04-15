@@ -35,45 +35,27 @@ const Spotify = () => {
   };
 
   // 🔐 Get tokens from URL or localStorage
-  useEffect(() => {
-    const hashParams = new URLSearchParams(window.location.hash.split('?')[1]);
-    const access_token = hashParams.get("access_token");
-    const refresh_token = hashParams.get("refresh_token");
-    const expires_in = hashParams.get("expires_in");
-    
-  
-    if (access_token && refresh_token && expires_in) {
-      const expiryTime = new Date(Date.now() + expires_in * 1000);
-      localStorage.setItem("access_token", access_token);
-      localStorage.setItem("refresh_token", refresh_token);
-      localStorage.setItem("token_expiry", expiryTime.toISOString());
-  
-      setAccessToken(access_token);
-      setRefreshToken(refresh_token);
-      setExpiresIn(expires_in);
-      setIsAuthorized(true);
-  
-      window.history.replaceState({}, document.title, window.location.pathname);
-    } else {
+    useEffect(() => {
       const storedAccess = localStorage.getItem("access_token");
       const storedRefresh = localStorage.getItem("refresh_token");
       const expiry = new Date(localStorage.getItem("token_expiry"));
-  
+    
       if (storedAccess && storedRefresh) {
         if (new Date() < expiry) {
           setAccessToken(storedAccess);
           setRefreshToken(storedRefresh);
           setIsAuthorized(true);
         } else {
-          refreshAccessToken(storedRefresh);
+          refreshAccessToken(storedRefresh); // already exists in your code
         }
       } else {
-        // 👇 Redirect to Spotify login automatically if no token found
+        // No tokens found, redirect to login
         window.location.href =
           "https://portfolio-chatbot-backend-wj84.onrender.com/api/spotify/login";
       }
-    }
-  }, []);  
+    }, []);
+    
+  
 
   // 🔁 Schedule refresh 5 mins before expiry
   useEffect(() => {
@@ -146,16 +128,7 @@ const Spotify = () => {
     });
     alert(`Playing track: ${trackId}`);
   };
-
-
-  // if(isAuthorized) {
-  //   return (
-  //     <div className="style">
-  //       <h1>Loading.........</h1>
-  //     </div>
-  //   )
-  // }
-  if (isAuthorized) {
+  if (!isAuthorized) {
     return (
       <div style={{ padding: "2rem", textAlign: "center" }}>
         <h2>Spotify Login Required</h2>
