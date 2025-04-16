@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import ChatBotButton from "../src/components/chatbot/ChatBotButton"
 import ChatModal from "../src/components/chatbot/ChatModal";
 import Spotify from "./pages/Spotify";
+import GitHubDashboard from "./pages/Github";
 
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/workexperience" element={<WorkExperience />} />
             <Route path="/spotify" element={<Spotify />} />
+            <Route path="/github" element={<GitHubDashboard />} />
           </Routes>
         </div>
         <Footer /> {/* Renders at the bottom */}
