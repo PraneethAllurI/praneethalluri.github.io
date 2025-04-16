@@ -227,10 +227,14 @@ const Spotify = () => {
             <div
               key={track.id}
               style={{
-                background: "#f1f1f1",
+                background: "#121212", // dark grayish black (Spotify dark)
+                color: "#fff",
                 padding: "1rem",
                 borderRadius: "10px",
+                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.8)",
+                marginBottom: "2rem",
                 maxWidth: "500px",
+                border: "1px solid #282828", // soft border like Spotify
               }}
             >
               <h4 style={{ margin: 0 }}>{track.name}</h4>
