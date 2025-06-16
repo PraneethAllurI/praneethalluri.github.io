@@ -65,25 +65,19 @@ const Home = () => {
               <Card.Title className="summary-title">
                 Professional Summary
               </Card.Title>
-              <Card.Text className="summary-text">
-                • Over <strong>2.5+ years</strong> of professional IT
-                experience.
-                <br />• <strong>1+ years</strong> of experience with{" "}
-                <strong>Nagios</strong> for network monitoring, incident
-                detection, and ticket management.
-                <br />• <strong>1 year</strong> of experience in managing{" "}
-                <strong>high-priority incidents (P1, P2)</strong>.<br />•
-                Currently transitioning into{" "}
-                <strong>Full Stack Development</strong>, with hands-on
-                experience in{" "}
-                <strong>MERN (MongoDB, Express.js, React, Node.js)</strong>.
-                <br />
-                • Strong problem-solving abilities, attention to detail, and
-                excellent collaboration skills.
-                <br />• Passionate about building scalable, user-friendly web
-                applications and eager to apply growing development skills as a{" "}
-                <strong>Full Stack Developer</strong>.
-              </Card.Text>
+             <Card.Text className="summary-text">
+  • Led end-to-end web development for clients, handling everything from UI/UX design to front-end and back-end implementation using the MERN stack.<br />
+  • Managed complete deployment lifecycle, including hosting setup, domain configuration, SSL, and custom email solutions.<br />
+  • Delivered tailored websites and web apps for local businesses, ensuring performance, responsiveness, and SEO best practices.<br />
+  • Developed and maintained full-stack web applications using the MERN stack, improving performance and scalability across multiple projects.<br />
+  • Designed and implemented RESTful APIs and integrated third-party services, ensuring seamless front-end and back-end communication.<br />
+  • Built dynamic and responsive user interfaces using React.js, improving user experience and engagement.<br />
+  • Integrated APIs and managed state using React Context, ensuring smooth data flow and performance.<br />
+  • Optimized components and implemented lazy loading, resulting in faster load times and improved SEO.<br />
+  • Strong problem-solving abilities, attention to detail, and excellent collaboration skills.<br />
+  • Passionate about building scalable, user-friendly web applications and eager to apply growing development skills as a Full Stack Developer.
+</Card.Text>
+
 
               <div className="highlighted-links fade-in">
                 <Link to="/workexperience" className="highlighted-link">

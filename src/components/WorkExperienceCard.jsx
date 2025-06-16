@@ -10,7 +10,6 @@ const WorkExperienceCard = ({ company, duration, roles }) => {
         {roles.map((role, index) => (
           <div key={index} className="mt-3">
             <h5>{role.title}</h5>
-            <p className="text-muted">{role.period}</p>
             <ul>
               {role.responsibilities.map((task, taskIndex) => (
                 <li key={taskIndex}>{task}</li>

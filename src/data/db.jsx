@@ -31,42 +31,45 @@ const projects = [
 
 const workExperience = [
   {
-    company: "Capgemini",
+    company: "CAPGEMINI",
     duration: "Dec 2021 – May 2024",
     roles: [
       {
-        title: "Network Operations Center (NOC) Team Member",
-        period: "Apr 2022 – Jun 2023",
+        title: "Frontend Developer",
+        period: "Dec 2021 – May 2024",
         responsibilities: [
-          "Monitored network infrastructure, servers, and devices for performance and availability using tools like Nagios.",
-          "Detected and responded to incidents, performing troubleshooting and coordinating with the technical support.",
-          "Managed incidents through ServiceNow, ensuring proper escalation and resolution within SLAs."
-        ]
-      },
-      {
-        title: "Major Incident Manager",
-        period: "Sept 2023 – May 2024",
-        responsibilities: [
-          "Led resolution of critical incidents, coordinating cross-functional teams for timely resolution.",
-          "Managed high-priority incidents, ensuring swift escalation and communication with stakeholders.",
-          "Acted as the primary point of contact for major incident communications to senior leadership."
+          "Built dynamic and responsive user interfaces using React.js, improving user experience and engagement.",
+          "Integrated APIs and managed state using React Context, ensuring smooth data flow and performance.",
+          "Optimized components and implemented lazy loading, resulting in faster load times and improved SEO."
         ]
       }
     ]
   },
   {
-    company: "Self-Employed (MERN Stack Developer)",
-    duration: "June 2024 – Present",
+    company: "BUILDMEPRODUCT",
+    duration: "Jun 2024 – May 2025",
     roles: [
       {
-        title: "Full-Stack Developer",
-        period: "June 2024 – Present",
+        title: "Freelance Full-Stack Developer",
+        period: "Jun 2024 – May 2025",
         responsibilities: [
-          "Developed and deployed multiple full-stack applications using the MERN stack.",
-          "Built the Government Issue Reporting System allowing users to report issues with image uploads and tracking.",
-          "Implemented JWT authentication and secure RESTful APIs.",
-          "Designed and developed a polling app with real-time voting and data visualization.",
-          "Deployed applications using Vercel and Firebase for seamless hosting and scalability."
+          "Developed and maintained full-stack web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js), improving performance and scalability across multiple projects.",
+          "Designed and implemented RESTful APIs and integrated third-party services, ensuring seamless front-end and back-end communication for dynamic, data-driven user experiences."
+        ]
+      }
+    ]
+  },
+  {
+    company: "WEBSITES MADE LOCAL",
+    duration: "May 2025 – Present",
+    roles: [
+      {
+        title: "Full Stack Developer",
+        period: "May 2025 – Present",
+        responsibilities: [
+          "Led end-to-end web development for clients, handling everything from UI/UX design to front-end and back-end implementation using the MERN stack.",
+          "Managed complete deployment lifecycle, including hosting setup, domain configuration, SSL, and custom email solutions.",
+          "Delivered tailored websites and web apps for local businesses, ensuring performance, responsiveness, and SEO best practices."
         ]
       }
     ]
@@ -76,43 +79,41 @@ const workExperience = [
 
 const skills = [
   {
-    experience: "Self-Employed - MERN Stack Developer",
-    duration: "June 2024 – Present",
+    experience: "WEBSITES MADE LOCAL - Full Stack Developer",
+    duration: "May 2025 – Present",
     skills: [
-      "Full-Stack Development (MERN)",
-      "JavaScript (ES6+), React.js, Node.js, Express.js, MongoDB",
+      "Full-Stack Development (MERN Stack: MongoDB, Express.js, React.js, Node.js)",
+      "UI/UX Design and Implementation",
+      "Complete Deployment Lifecycle (Hosting, Domain Setup, SSL, Custom Email)",
+      "Performance Optimization and SEO Best Practices",
+      "Responsive Web Design",
+      "Client Communication and Requirement Analysis"
+    ]
+  },
+  {
+    experience: "BUILDMEPRODUCT - Freelance Full-Stack Developer",
+    duration: "Jun 2024 – May 2025",
+    skills: [
+      "Full-Stack Development (MERN Stack)",
       "RESTful API Design & Implementation",
-      "JWT Authentication & Security",
-      "State Management (Redux Toolkit, Context API)",
-      "Frontend UI (Bootstrap, TailwindCSS, React Router)",
-      "Version Control (Git, GitHub)",
-      "Cloud Storage (Cloudinary, Firebase Hosting)",
-      "Deployment (Vercel, Netlify)"
+      "Third-Party Service Integration",
+      "Performance and Scalability Improvements",
+      "Dynamic, Data-Driven User Experience"
     ]
   },
   {
-    experience: "Capgemini - Major Incident Manager",
-    duration: "Sept 2023 – May 2024",
+    experience: "CAPGEMINI - FRONTEND DEVELOPER",
+    duration: "Dec 2021 – May 2024",
     skills: [
-      "Incident Management & Communication",
-      "Root Cause Analysis (RCA)",
-      "Stakeholder Coordination",
-      "Critical Incident Resolution",
-      "IT Service Management (ITSM) Tools"
-    ]
-  },
-  {
-    experience: "Capgemini - Network Operations Center (NOC) Team Member",
-    duration: "Apr 2022 – Jun 2023",
-    skills: [
-      "Network Monitoring (Nagios, Appworx)",
-      "Incident Detection & Troubleshooting",
-      "ServiceNow Ticket Management",
-      "SLA & KPI Adherence",
-      "Cross-Team Coordination"
+      "JavaScript, React.js",
+      "API Integration and State Management (React Context)",
+      "Component Optimization and Lazy Loading",
+      "SEO Optimization",
+      "Responsive and Dynamic UI Development"
     ]
   }
 ];
+
 
 
 // Named exports instead of default exports
