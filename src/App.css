@@ -1,0 +1,122 @@
+
+  /* Global Styles */
+  body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    color: #0d6efd; /* Bootstrap primary blue */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #58a6ff; /* Lighter blue on hover */
+  }
+  
+  /* Custom Container Styles */
+  .container {
+    padding-top: 20px;
+  }
+  
+  /* Custom Navbar */
+  .navbar {
+    background-color: #1c1c1c !important;
+  }
+  .custom-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4caf50; /* Bright Yellow */
+  }
+  
+  /* Gradient Effect */
+  .custom-title-gradient {
+    background: linear-gradient(90deg, #ffcc00, #ff7300);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  /* Custom Cards */
+.custom-card {
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #333;
+  padding: 20px;
+  height: 100%; /* Ensures all cards take full available height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+}
+
+  .custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Tech Stack Badges */
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+  }
+  
+  .tech-badge {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+  /* Make the entire app take full height */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 70px;
+}
+
+/* Ensure the entire page takes full height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main content should take remaining space */
+.content {
+  flex: 1;
+}
+
+/* Footer sticks at the bottom */
+.footer {
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+  
+  @media (max-width: 576px) {
+    .custom-card {
+     margin: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    body {
+      padding-top: 90px; /* Extra space for smaller devices */
+    }
+  }
+  
+  
+  

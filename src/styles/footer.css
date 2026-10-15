@@ -1,0 +1,33 @@
+/* Default Footer Styles (Smaller & Compact) */
+.footer {
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+  padding: 10px 0; /* Reduced padding */
+  width: 100%;
+  font-size: 0.9rem; /* Slightly smaller text */
+}
+
+/* Social Icons */
+.social-icon {
+  font-size: 1.2rem; /* Slightly smaller icons */
+  color: #ffcc00;
+  transition: color 0.3s ease-in-out;
+  margin: 0 4px;
+}
+
+.social-icon:hover {
+  color: #ffaa00;
+}
+
+/* 📌 Extra Compact for Small Screens */
+@media (max-width: 576px) {
+  .footer {
+    padding: 5px 0; /* Reduce padding even more */
+    font-size: 0.8rem; /* Smaller text */
+  }
+
+  .social-icon {
+    font-size: 1rem; /* Even smaller icons */
+  }
+}
