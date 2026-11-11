@@ -52,7 +52,7 @@ const Home = () => {
 
           {/* Resume Download Button */}
           <div className="resume-container fade-in">
-            <a href="/Praneeth_React.pdf" download="Praneeth_Resume.pdf">
+            <a href="/praneeth_resume_FullStack_3.0.pdf" download="praneeth_resume_FullStack_3.0.pdf">
               <Button variant="success" size="lg" className="mt-3">
                 📄 Download Resume
               </Button>
